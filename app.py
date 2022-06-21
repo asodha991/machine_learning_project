@@ -6,6 +6,9 @@ app=Flask(__name__)
 
 
 @app.route("/",methods=['GET','POST'])
+
+def home():
+    return " Heloo CI CD pipeline"
 def index():
     try:
         raise Exception("We are testing custom exception")
@@ -17,4 +20,4 @@ def index():
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=False)
